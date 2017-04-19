@@ -55,6 +55,10 @@ $(() => {
 	$.getScript( "templates/shows_list.js");
 	$.getScript( "templates/book_details.js", () => {
 		templates.bookDetails = bookDetailsTemplate;
+		var url 	= decodeURI(window.location.hash);
+		var temp = url.split('/')[0];
+		if(temp = '#bookdetails')
+			renderPage();
 	});
 
 //END OF 
