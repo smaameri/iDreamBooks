@@ -55,9 +55,9 @@ $(() => {
 	$.getScript( "templates/shows_list.js");
 	$.getScript( "templates/book_details.js", () => {
 		templates.bookDetails = bookDetailsTemplate;
-		var url 	= decodeURI(window.location.hash);
-		var temp = url.split('/')[0];
-		if(temp = '#bookdetails')
+		var hash 	= decodeURI(window.location.hash);
+		var temp  = hash.split('/')[0];
+		if(temp   = '#bookdetails')
 			renderPage();
 	});
 
