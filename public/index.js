@@ -28,7 +28,16 @@ var templates = {
 
 
 $(() => {
+
+	//url hash value
+  var hashURL = decodeURI(window.location.hash);
 	
+	// On every hash change the render function is called with the new hash.
+	// This is how the navigation of our app happens.
+ 	$(window).on('hashchange', () => {
+ 		renderPage(decodeURI(window.location.hash));
+ 	});
+
 ////AJAX Calls to get templates and data	
 	//Generate Genre List
 	$.when(
@@ -57,7 +66,7 @@ $(() => {
 			templates.booksByGenre = booklist;
 			templates.show = showsTemplate;
 			templates.bookDetails = bookDetailsTemplate;
-			renderPage()
+			renderPage(hashURL)
 		})
 		
 		
@@ -65,17 +74,6 @@ $(() => {
 
 //END OF 
 	
-	
-	//Load inital view based on url hash value
-  var hashURL = decodeURI(window.location.hash);
-	//renderPage(hashURL);
-	
-	// On every hash change the render function is called with the new hash.
-	// This is how the navigation of our app happens.
- 	$(window).on('hashchange', () => {
- 		renderPage(decodeURI(window.location.hash));
- 	});
-
 	
 ////AJAX Calls to APIs to get data. Function make call to render
 	//the appropriate template once the response returns
