@@ -52,7 +52,14 @@ $(() => {
 		templates.booksByGenre = booklist;
 	});
 	
-	$.getScript( "templates/shows_list.js");
+	$.getScript( "templates/shows_list.js", () => {
+		templates.bookDetails = bookDetailsTemplate;
+		var hash 	= decodeURI(window.location.hash);
+		var temp  = hash.split('/')[0];
+		if(temp   = '#shows')
+			renderPage(hash);
+	});
+	
 	$.getScript( "templates/book_details.js", () => {
 		templates.bookDetails = bookDetailsTemplate;
 		var hash 	= decodeURI(window.location.hash);
