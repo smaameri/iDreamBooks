@@ -82,11 +82,13 @@ $(() => {
 			searchURL = genresURL.concat(`&slug=${genre}`)
 		$.ajax(searchURL)
 			.done((response) => {
-				//console.log(response);
+				console.log(response);
 				response.map((item) => {
 					//console.log(item.review_publication_logo)
 					//console.log('https' + item.review_publication_logo.substring(4))
 					item.review_publication_logo = 'https' + item.review_publication_logo.substring(4)
+					item.review_rating_image = 'https' + item.review_rating_image.substring(4)
+					
 				})
 				renderBooksByGenreList(response);
 		})
@@ -101,11 +103,11 @@ $(() => {
 		  $.ajax(currentSearchURL),
 		  $.ajax(currentShowshURL))
 			.done((first_call, second_call) => {
-				console.log(first_call[0].book.critic_reviews)
+				//console.log(first_call[0].book.critic_reviews)
 				first_call[0].book.critic_reviews.map((item) => {
-					console.log(item.source_logo)
+					//console.log(item.source_logo)
 					//item.source_logo = 'https' + item.source_logo.substring(4)
-					console.log(item.source_logo)					
+					//console.log(item.source_logo)					
 				})
 				var obj = Object.assign(first_call[0], second_call[0]);
 					renderBookDetailsPage(obj);
