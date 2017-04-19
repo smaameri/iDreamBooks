@@ -73,7 +73,7 @@ $(() => {
 	
 	//Load inital view based on url hash value
   var hashURL = decodeURI(window.location.hash);
-	renderPage(hashURL);
+	//renderPage(hashURL);
 	
 	// On every hash change the render function is called with the new hash.
 	// This is how the navigation of our app happens.
