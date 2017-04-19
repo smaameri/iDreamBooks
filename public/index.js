@@ -64,13 +64,10 @@ $(() => {
 		$.getScript( "templates/shows_list.js"))
 		.done(() => {
 			templates.booksByGenre = booklist;
-			templates.show = showsTemplate;
+			templates.shows = showsTemplate;
 			templates.bookDetails = bookDetailsTemplate;
 			renderPage(hashURL)
 		})
-		
-		
-		
 
 //END OF 
 	
