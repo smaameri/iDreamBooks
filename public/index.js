@@ -19,6 +19,7 @@ var genres = []
 //Object to store all the handlebar templates.
 var templates = {
 	booksByGenre:'',
+	bookDetails:'',
 	genresList:'',
 	searchForm:'',
 	navbar:''
@@ -52,7 +53,9 @@ $(() => {
 	});
 	
 	$.getScript( "templates/shows_list.js");
-	$.getScript( "templates/book_details.js");
+	$.getScript( "templates/book_details.js", () => {
+		templates.bookDetails = bookDetailsTemplate;
+	});
 
 //END OF 
 	
@@ -232,7 +235,7 @@ $(() => {
 	// View 2 - detailed view of a selected book
 	function renderBookDetailsPage(data){
     var page = $('#book-details');
-		renderTemplateFunction(page, bookDetailsTemplate, data)
+		renderTemplateFunction(page, templates.bookDetails, data)
 		
 		var reviews = data.book.critic_reviews;
 		//Loop through each of the books top reviews and generate a start
