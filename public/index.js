@@ -56,7 +56,7 @@ $(() => {
 	$.getScript( "templates/book_details.js", () => {
 		templates.bookDetails = bookDetailsTemplate;
 		var hash 	= decodeURI(window.location.hash);
-		var temp  = url.split('/')[0];
+		var temp  = hash.split('/')[0];
 		if(temp   = '#bookdetails')
 			renderPage(hash);
 	});
