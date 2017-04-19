@@ -22,7 +22,8 @@ var templates = {
 	bookDetails:'',
 	genresList:'',
 	searchForm:'',
-	navbar:''
+	navbar:'',
+	shows:''
 }
 
 
@@ -41,32 +42,26 @@ $(() => {
 			//render Genre List
 			renderGenresList();
 		})
-		
-	$.getScript( "templates/navbar.js", () => {
-		templates.navbar = navbarTemplate;
-    var element = $('#navbarTemplate');
-		renderNavbar();
-	});
-		
-	$.getScript( "templates/books_list.js", ()  => {
-		templates.booksByGenre = booklist;
-	});
 	
-	$.getScript( "templates/shows_list.js", () => {
-		templates.bookDetails = showsTemplate;
-		var hash 	= decodeURI(window.location.hash);
-		var temp  = hash.split('/')[0];
-		if(temp   = '#shows')
-			renderPage(hash);
-	});
+		$.getScript( "templates/navbar.js", () => {
+			templates.navbar = navbarTemplate;
+	    var element = $('#navbarTemplate');
+			renderNavbar();
+		});
 	
-	$.getScript( "templates/book_details.js", () => {
-		templates.bookDetails = bookDetailsTemplate;
-		var hash 	= decodeURI(window.location.hash);
-		var temp  = hash.split('/')[0];
-		if(temp   = '#bookdetails')
-			renderPage(hash);
-	});
+	$.when(
+		$.getScript( "templates/books_list.js"),
+		$.getScript( "templates/book_details.js"),
+		$.getScript( "templates/shows_list.js"))
+		.done(() => {
+			templates.booksByGenre = booklist;
+			templates.show = showsTemplate;
+			templates.bookDetails = bookDetailsTemplate;
+			renderPage()
+		})
+		
+		
+		
 
 //END OF 
 	
@@ -263,7 +258,7 @@ $(() => {
 	//View 3 - view which shows books appearing on recent TV Channels
 	function renderShowsPage(data){
     var page = $('#all-shows');
-		renderTemplateFunction(page, showsTemplate, data)
+		renderTemplateFunction(page, templates.shows, data)
 	}
 	
 
