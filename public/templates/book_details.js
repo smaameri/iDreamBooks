@@ -42,24 +42,27 @@ var bookDetailsTemplate =
 					
 					</div>
 			    <div role="tabpanel" class="tab-pane fade" id="showsTab">
-						{{#if (get_length books.shows)}}
 							<table class='table table-striped'>
 							  <tr>
 							    <th>Channel</th>
 							    <th>Air Date</th>
 							  </tr>
 								{{#each books}}
-									{{#each shows}}
-					  				<tr>
-									    <td>{{showName}}</td>
-									    <td>{{showDate}}</td>
-									  </tr>
-									{{/each}}
+									{{#if shows}}
+										{{#each shows}}
+						  				<tr>
+										    <td>{{showName}}</td>
+										    <td>{{showDate}}</td>
+										  </tr>
+										{{/each}}
+									{{else}}
+						  				<tr >
+										    <td class='noResults'>No TV appearances for this book</td>
+										    <td></td>
+										  </tr>
+									{{/if}}	
 								{{/each}}
 							</table>
-						{{else}}
-							<p class='noResults'>No TV appearances for this book</p>
-						{{/if}}	
 					</div>
 				{{else}}
 					<p class='noResults'>No book results for this search</p>

@@ -105,7 +105,8 @@ body {
   font-size: 16px; }
 
 .bookRating {
-  float: right; }
+  float: right;
+  font-size: 18px; }
 
 .topReviewsHeader {
   margin-top: 60px; }
