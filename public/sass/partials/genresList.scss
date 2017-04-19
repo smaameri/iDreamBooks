@@ -1,0 +1,19 @@
+
+#genres-list{
+	
+	padding-left:0px;
+	padding:10px;
+	border:solid $grey 1px;
+	border-radius:4px;
+	background-color:$lightgrey;
+	list-style:none;
+	
+	li a{
+		color:black;
+	}
+	
+}
+
+#genresTitle{
+	font-size:20px;
+}

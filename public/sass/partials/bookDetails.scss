@@ -1,0 +1,68 @@
+$grey:#BDBDBD;
+$darkGrey:#424242;
+
+#bookDetailsMain{
+	margin-bottom:40px;
+}
+
+#bookDetailsMain{
+	
+	padding-left:20px;
+	
+	.bookResult{
+		font-size:16px;
+		color:$darkGrey;
+		position:relative;
+		border-bottom:1px solid $grey;
+		padding:20px;
+		padding-left:110px;
+		float:left;
+		overflow:hidden;
+	  transition:all 0.3s ease;
+		background-color:white;
+	}
+}
+
+.bookReview{
+	position:relative;
+	padding-top:30px;
+	padding-bottom:20px;
+	padding-left:100px;
+	border-bottom:$grey solid 1px;
+}
+.reviewPublicationLogo{
+}
+
+.reviewPublicationTitle{
+	font-size:16px;
+}
+
+.bookRating{
+	float:right;
+}
+
+.topReviewsHeader{
+	margin-top:60px;
+}
+
+.reviewRating{
+	float:right;
+}
+
+.br-wrapper{
+	float:right;
+}
+
+#reviewsTab, #showsTab{
+	margin-top:20px;
+}
+
+.noShows{
+	padding-left:15px;
+}
+
+.noResults{
+	padding-left:15px;
+	padding-top:20px;
+	font-size:16px;
+}

@@ -1,0 +1,40 @@
+.navbar-default{
+	background-color:$green;
+	
+	.navbar-nav > li > a{
+		color:white;
+		font-size:16px;
+		padding-right:20px;
+	}
+	
+	.navbar-nav > li > a:hover{
+		color:white;
+		opacity:0.7;
+	}
+	
+	.navbar-nav > li > a:focus{
+		color:white;
+	}
+	
+	
+	img{
+		height:18px;
+	}
+	
+}
+
+.navbar-brand{
+	display:inline-flex;
+	padding-left:50px;
+	
+	span{
+		margin-left:10px;
+		color:white;
+		font-size:20px;
+		font-weight:700;
+		margin-top:px;
+		font-family: 'Spinnaker', sans-serif;
+	}
+	
+}
+

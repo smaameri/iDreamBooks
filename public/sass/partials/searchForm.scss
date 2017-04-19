@@ -1,0 +1,11 @@
+$a: 50%;
+$b: 150px;
+
+
+#searchForm{
+	margin-left:calc(#{$a} - #{$b});
+	
+	input{
+		width:300px;
+	}
+}

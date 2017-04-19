@@ -1,0 +1,65 @@
+
+
+#books-by-genre-list{
+  transition:all 0.3s ease;
+}
+
+
+.bookResult{
+	font-size:16px;
+	color:$darkGrey;
+	position:relative;
+	border-bottom:1px solid $grey;
+	padding:20px;
+	padding-left:100px;
+	float:left;
+	overflow:hidden;
+  transition:all 0.3s ease;
+	background-color:white;
+}
+
+
+.bookResult:hover{
+	border-color:lighten($darkGrey, 15%);
+	background-color:$lightgrey;
+	cursor:pointer;
+}
+
+.bookResult:active{
+	border-color:lighten($lightgrey, 15%);
+	background-color:darken($lightgrey, 10%);
+	cursor:pointer;
+}
+
+
+.reviewRatingImage{
+	float:right;
+	top:0px;
+	right:20px;
+	margin-left:10px;
+}
+
+.bookTitle{
+	font-size:24px;
+}
+
+.bookAuthor{
+	font-size:18px;
+}
+
+.reviewPublicationLogo{
+	width:80px;
+	height:80px;
+	float:left;
+  background-position: center center;
+  background-repeat: no-repeat;
+	background-size:cover;
+	position:absolute;
+	left:0;
+	margin-left:10px;
+	
+}
+
+.reviewSnippet{
+	
+}
