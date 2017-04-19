@@ -53,7 +53,7 @@ $(() => {
 	});
 	
 	$.getScript( "templates/shows_list.js", () => {
-		templates.bookDetails = bookDetailsTemplate;
+		templates.bookDetails = showsTemplate;
 		var hash 	= decodeURI(window.location.hash);
 		var temp  = hash.split('/')[0];
 		if(temp   = '#shows')
