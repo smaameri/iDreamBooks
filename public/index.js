@@ -54,10 +54,18 @@ $(() => {
 	
 	$.getScript( "templates/shows_list.js", () => {
 		templates.bookDetails = showsTemplate;
+		var hash 	= decodeURI(window.location.hash);
+		var temp  = hash.split('/')[0];
+		if(temp   = '#shows')
+			renderPage(hash);
 	});
 	
 	$.getScript( "templates/book_details.js", () => {
 		templates.bookDetails = bookDetailsTemplate;
+		var hash 	= decodeURI(window.location.hash);
+		var temp  = hash.split('/')[0];
+		if(temp   = '#bookdetails')
+			renderPage(hash);
 	});
 
 //END OF 
@@ -65,7 +73,7 @@ $(() => {
 	
 	//Load inital view based on url hash value
   var hashURL = decodeURI(window.location.hash);
-	renderPage(hashURL);
+	//renderPage(hashURL);
 	
 	// On every hash change the render function is called with the new hash.
 	// This is how the navigation of our app happens.
