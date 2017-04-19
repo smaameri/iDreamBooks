@@ -5,13 +5,13 @@ var apiKey = 'ae681fdeef7a192e0e05f716f70d36aec4903cc7';
 //API URLs to access idreambooks data
 
 //API to access top 25 most recent book reviews by Genre
-var genresURL    = `http://idreambooks.com/api/publications/recent_recos.json?key=${apiKey}`
+var genresURL    = `https://idreambooks.com/api/publications/recent_recos.json?key=${apiKey}`
 // API to access book details and reviews for a certain book
-var detailsURL   = `http://idreambooks.com/api/books/reviews.json?key=${apiKey}`;
+var detailsURL   = `https://idreambooks.com/api/books/reviews.json?key=${apiKey}`;
 //API to access most TV Channel appearence for a certain book.
-var bookShowsURL = `http://idreambooks.com/api/books/show_features.json?key=${apiKey}`;
+var bookShowsURL = `https://idreambooks.com/api/books/show_features.json?key=${apiKey}`;
 //API to access most recently featured books on all TV Channels.
-var showsURL     = `http://idreambooks.com/api/shows/books_featured.json?key=${apiKey}`;
+var showsURL     = `https://idreambooks.com/api/shows/books_featured.json?key=${apiKey}`;
 
 //Array to store list of genres from genres.json
 var genres = []
