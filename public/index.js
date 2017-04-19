@@ -44,7 +44,7 @@ $(() => {
 		//Get template for Genres List
 	  $.ajax( "templates/genre_list.js"),
 	  //Get data list for Genre List
-		$.getJSON("data/genres.json"))
+		$.getJSON("static/data/genres.json"))
 		.done((first_call, second_call) => {
 			genres = second_call[0];
 			templates.genresList = genreListTemplate;

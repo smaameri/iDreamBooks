@@ -10,7 +10,7 @@ var navbarTemplate =
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="#">
-						<img src='./img/logo.png'>
+						<img src='./static/img/logo.png'>
 						<span>Books</span>
 					</a>
 		    </div>
