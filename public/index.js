@@ -104,7 +104,7 @@ $(() => {
 				console.log(first_call[0].book.critic_reviews)
 				first_call[0].book.critic_reviews.map((item) => {
 					console.log(item.source_logo)
-					item.source_logo = 'https' + item.source_logo.substring(4)
+					//item.source_logo = 'https' + item.source_logo.substring(4)
 					console.log(item.source_logo)					
 				})
 				var obj = Object.assign(first_call[0], second_call[0]);
