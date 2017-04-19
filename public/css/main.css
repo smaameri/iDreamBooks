@@ -1,0 +1,153 @@
+body {
+  margin: 5;
+  padding: 0;
+  padding-top: 90px;
+  overflow-y: scroll; }
+
+.navbar-default {
+  background-color: #5FC08B; }
+  .navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: 16px;
+    padding-right: 20px; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: white;
+    opacity: 0.7; }
+  .navbar-default .navbar-nav > li > a:focus {
+    color: white; }
+  .navbar-default img {
+    height: 18px; }
+
+.navbar-brand {
+  display: inline-flex;
+  padding-left: 50px; }
+  .navbar-brand span {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: px;
+    font-family: 'Spinnaker', sans-serif; }
+
+#books-by-genre-list {
+  transition: all 0.3s ease; }
+
+.bookResult {
+  font-size: 16px;
+  color: #424242;
+  position: relative;
+  border-bottom: 1px solid #BDBDBD;
+  padding: 20px;
+  padding-left: 100px;
+  float: left;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white; }
+
+.bookResult:hover {
+  border-color: #686868;
+  background-color: #FAFAFA;
+  cursor: pointer; }
+
+.bookResult:active {
+  border-color: white;
+  background-color: #e1e1e1;
+  cursor: pointer; }
+
+.reviewRatingImage {
+  float: right;
+  top: 0px;
+  right: 20px;
+  margin-left: 10px; }
+
+.bookTitle {
+  font-size: 24px; }
+
+.bookAuthor {
+  font-size: 18px; }
+
+.reviewPublicationLogo {
+  width: 80px;
+  height: 80px;
+  float: left;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  margin-left: 10px; }
+
+#bookDetailsMain {
+  margin-bottom: 40px; }
+
+#bookDetailsMain {
+  padding-left: 20px; }
+  #bookDetailsMain .bookResult {
+    font-size: 16px;
+    color: #424242;
+    position: relative;
+    border-bottom: 1px solid #BDBDBD;
+    padding: 20px;
+    padding-left: 110px;
+    float: left;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: white; }
+
+.bookReview {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  border-bottom: #BDBDBD solid 1px; }
+
+.reviewPublicationTitle {
+  font-size: 16px; }
+
+.bookRating {
+  float: right;
+  font-size: 18px; }
+
+.topReviewsHeader {
+  margin-top: 60px; }
+
+.reviewRating {
+  float: right; }
+
+.br-wrapper {
+  float: right; }
+
+#reviewsTab, #showsTab {
+  margin-top: 20px; }
+
+.noShows {
+  padding-left: 15px; }
+
+.noResults {
+  padding-left: 15px;
+  padding-top: 20px;
+  font-size: 16px; }
+
+#genres-list {
+  padding-left: 0px;
+  padding: 10px;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  list-style: none; }
+  #genres-list li a {
+    color: black; }
+
+#genresTitle {
+  font-size: 20px; }
+
+#searchForm {
+  margin-left: calc(50% - 150px); }
+  #searchForm input {
+    width: 300px; }
+
+#all-shows h3 {
+  margin-top: 0px;
+  margin-bottom: 30px; }
+
+/*# sourceMappingURL=main.css.map */
